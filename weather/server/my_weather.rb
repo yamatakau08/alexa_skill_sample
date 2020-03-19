@@ -11,7 +11,7 @@ post '/endpoint' do
   telop = weather.telop # 今日の天気
 
   ret = {"version": "1.0",
-         "response": {"outputSpeeche": {"type": "PlainText", "text": telop}}}
+         "response": {"outputSpeech": {"type": "PlainText", "text": telop}}}
 
   return json(ret)
 end
