@@ -14,7 +14,7 @@ class WeatherHacks
   def telop
     response = OpenURI.open_uri(@url,{:proxy => ENV["http_proxy"]})
     parse_text = JSON.parse(response.read)
-    puts JSON.pretty_generate(parse_text) if DEBUG
+    #puts JSON.pretty_generate(parse_text)
     title = parse_text["title"]
     telop = parse_text["forecasts"].select {|x| x["dateLabel"] == "今日"}.first["telop"].sub("のち","のち,")
     title + "," + telop
