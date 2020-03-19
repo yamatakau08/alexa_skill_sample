@@ -1,0 +1,17 @@
+* PaizaCloud 側
+open ターミナル
+#+begin_example
+$ cd
+$ git clone https://github.com/yamatakau08/alexa_skill_sample.git
+$ cd alexa_skill_sample/weather/server/
+$ ls
+livedoor_forecast.rb  my_weather.rb
+$ sudo ruby ./my_weather.rb -o 0 -p 80
+...
+#+end_example
+
+プログラムを変更した場合、Ctrl-C で中断し、再度 sudo ruby ... 実行する。
+
+* alexa develop console側
+Alexaシュミレータ "自宅の天気" と入力
+PaizaCloud側のServerが返すJSON が出力として表示されるので正しい動作をしているか確認する
